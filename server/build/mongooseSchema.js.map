@@ -1,1 +1,0 @@
-{"version":3,"file":"mongooseSchema.js","sourceRoot":"","sources":["../src/mongooseSchema.ts"],"names":[],"mappings":";;;;;AAAA,wDAAgC;AAEhC,IAAI,MAAM,GAAG,kBAAQ,CAAC,MAAM,CAAC;AAE7B,IAAI,YAAY,GAAG,IAAI,MAAM,CAAC;IAC5B,IAAI,EAAE,MAAM;IACZ,IAAI,EAAE,MAAM;CACb,CAAC,CAAC;AAOQ,QAAA,MAAM,GAAG,kBAAQ,CAAC,KAAK,CAAU,QAAQ,EAAE,YAAY,CAAC,CAAC"}
