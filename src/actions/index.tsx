@@ -6,8 +6,7 @@ import {
   ACTIVE_COMPONENT
 } from './actionTypes';
 
-const serverPort = '8080'; //TODO change to server port
-const dbURI = `${window.location.protocol}//${window.location.hostname}:${serverPort}`;
+const serverAddress = 'https://memorygameserver.prefx.eu'; //TODO change to server port
 
 export function finishTime(time: number) {
   return {
@@ -31,10 +30,10 @@ function saveRecordsToStore(top10Records: any) {
 
 export function fetchRecords() {
   return function(dispatch: any) {
-    console.log('Fetch funcion uri', dbURI);
+    console.log("Fetch funcion uri", serverAddress);
     axios
-      .get(dbURI + '/top_10_records')
-      .then(result => dispatch(saveRecordsToStore(result.data)));
+      .get(serverAddress + "/top_10_records")
+      .then((result) => dispatch(saveRecordsToStore(result.data)));
   };
 }
 
