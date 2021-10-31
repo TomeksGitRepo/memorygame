@@ -11,8 +11,8 @@ app.use(cors());
 const port = 3011; // default port to listen
 
 const dbUri = 'mongodb://localhost:27017/memoryGamePortfolio';
-mongoose.connect(dbUri, (err: mongoose.Error) => {
-  if (err) console.log(err);
+mongoose.connect(dbUri,  () => {
+  //if (err) console.log(err);
   console.log(`Successfuly connected to ${dbUri}`);
   return;
 });
