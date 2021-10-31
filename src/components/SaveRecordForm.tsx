@@ -1,8 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 
-const serverPort = '8080';
-const dbURI = `${window.location.protocol}//${window.location.hostname}:${serverPort}`;
+const serverAddress = 'https://memorygameserver.prefx.eu';
 
 export default class SaveRecordForm extends React.Component<any, any> {
   newBadWords: string[];
@@ -743,9 +742,9 @@ export default class SaveRecordForm extends React.Component<any, any> {
 
     let rgx = new RegExp(this.newBadWords.join('|'), 'gi');
     let clearedValue = this.state.value.replace(rgx, '****');
-    Axios.post(dbURI + '/new_record', {
+    Axios.post(serverAddress + "/new_record", {
       nick: clearedValue,
-      time: this.props.time
+      time: this.props.time,
     });
     this.setState({ closeForm: true });
   }
